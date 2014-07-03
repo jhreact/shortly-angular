@@ -14,10 +14,8 @@ angular.module('shortly.shorten', [])
       data: JSON.stringify($scope.link)
     }).success(function(data, status, headers, config){
       console.log("SUCCESS");
-      console.log(data);
+      $scope.link = data;
       $scope.loading = false;
-    }).fail(function(){
-      console.log('goofd')
     });
   };
 });
